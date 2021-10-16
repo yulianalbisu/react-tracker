@@ -1,13 +1,14 @@
 import React from 'react'
 import Task from './Task'
 
-
-const Tasks = ({ tasks }) => {
+// 3. onDelete is a prop so, we pass the prop in here
+const Tasks = ({ tasks, onDelete, onToggle }) => {
     return (
         //setTasks([...tasks, {}])
         <>
            {tasks.map((task) => (
-           <Task key={task.id} task={task}/>
+               //2. pass the prop in here, comming from app, because in there is where we have the event
+           <Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle}/>
            ))} 
         </>
     )
