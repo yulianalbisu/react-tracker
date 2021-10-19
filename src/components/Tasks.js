@@ -8,7 +8,10 @@ const Tasks = ({ tasks, onDelete, onToggle }) => {
         <>
            {tasks.map((task) => (
                //2. pass the prop in here, comming from app, because in there is where we have the event
-           <Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle}/>
+           <Task key={task.id} 
+           task={task} 
+           onDelete={onDelete} 
+           onToggle={onToggle}/>
            ))} 
         </>
     )
